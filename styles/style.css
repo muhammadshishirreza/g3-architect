@@ -1,23 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
 .work-sans {
-  font-family: "Inter", sans-serif;
+    font-family: "Inter", sans-serif;
 }
-*{
+
+* {
     margin: 0%;
     padding: 0%;
 }
-.light-grey{
+
+.light-grey {
     color: #424242;
 }
-.extra-light-grey{
+
+.extra-light-grey {
     color: #727272;
 }
 
-.display-flex{
+.light-orange {
+    color: rgba(255, 144, 14, 1);
+}
+
+.display-flex {
     display: flex;
 }
 
-.primary-btn{
+.primary-btn {
     background-color: rgba(255, 144, 14, 1);
     color: #FFFFFF;
     font-size: 1.4rem;
@@ -25,62 +33,193 @@
     padding: 1.6rem;
     border: none;
     border-radius: 5px;
-}
-.small-text{
-    font-size: 1rem;
-}
-#header{
-    background-color: rgba(255, 144, 14, 0.1);
-    
+    cursor: pointer;
 }
 
-.navbar{
+.small-text {
+    font-size: 1rem;
+}
+
+#header {
+    background-color: rgba(255, 144, 14, 0.1);
+
+}
+
+.navbar {
     justify-content: space-between;
     align-items: center;
 }
-.nav-links{
+
+.nav-links {
     justify-content: space-between;
     align-items: center;
     gap: 2rem;
 }
-.nav-item{
+
+.nav-item {
     list-style: none;
 }
-.nav-link{
+
+.nav-link {
     text-decoration: none;
     color: black;
     font-size: 1.2rem;
 }
-.brand{
+
+.brand {
     font-size: 2.8rem;
     font-weight: 700;
     margin: 20px;
 }
-.navbar, .banner{
+
+.navbar,
+.banner {
     max-width: 1440px;
     margin: 0 auto;
 }
-.banner{
+
+.banner {
     text-align: center;
 }
 
-.banner-title{
+.banner-title {
     font-size: 4rem;
     font-weight: 700;
 }
-.banner-description, .banner-title, .banner-btn{
+
+.banner-description,
+.banner-title,
+.banner-btn {
     margin: 1.5rem;
 }
-.banner-image{
+
+.banner-image {
     width: 100%;
     margin-bottom: 1.5rem;
 }
 
+/* Quick Features */
+main {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.quick-feature {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    gap: 3.6rem;
+    align-items: center;
+}
+
+.teams {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.4rem;
+}
+
+.short-details {
+    margin: 1.5rem;
+}
+
+.short-details * {
+    margin-bottom: 1.5rem;
+}
+
+.feature-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+
+.quick-feature-des {
+    margin-right: 5rem;
+}
+
+/* Described Feature */
+.described-feature {
+    padding: 1.5rem 0;
+    gap: 5rem;
+}
+
+.feature-description {
+    margin: 2rem 0;
+}
+
+.des-feature-title {
+    border-left: 5px solid #FF900E;
+    padding-left: 1rem;
+}
+
+.des-feature-title,
+.feature {
+    margin: 1.5rem 0;
+}
+
+.short-feature-title {
+    font-size: 1.5rem;
+}
+
+.feature {
+    padding: 1.9rem;
+    box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.06);
+}
+
+.feature-image {
+    position: relative;
+}
+
+.feature-image-property {
+    margin: 2rem;
+}
+
+.experience-btn {
+    font-size: 2rem;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+}
+
 @media screen and (max-width: 576px) {
-    .navbar,.nav-links{
+
+    .navbar,
+    .nav-links,
+    .quick-feature {
         flex-direction: column;
     }
+
+    .quick-feature,
+    .described-feature {
+        flex-direction: column-reverse;
+        margin: 0 auto;
+    }
+
+    .feature-description {
+        margin: 1rem;
+    }
+
+    .teams {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1.4rem;
+    }
+
+    .feature-image-property {
+        width: calc(100% - 4rem);
+    }
 }
-@media screen and (min-width: 577px) and (max-width: 768px) {
-    
+
+@media screen and (max-width: 992px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .quick-feature, .described-feature {
+        flex-direction: column-reverse;
+        margin: 0 auto;
+    }
+    .feature-description {
+        margin: 2rem;
+    }
+    .feature-image-property {
+        width: calc(100% - 4rem);
+    }
 }
