@@ -40,7 +40,7 @@
     font-size: 1rem;
 }
 
-#header {
+#header, #footer {
     background-color: rgba(255, 144, 14, 0.1);
 
 }
@@ -178,6 +178,46 @@ main {
     bottom: 0px;
 }
 
+/* Some FActs */
+.some-facts {
+    margin: 3rem 0;
+}
+
+.some-facts>h2 {
+    margin-bottom: 1rem;
+}
+
+.facts {
+    justify-content: space-around;
+    margin-top: 3rem;
+}
+
+.fact {
+    text-align: center;
+    padding: 2.8rem 2.5rem;
+    border: 2px solid #FF900E;
+    border-radius: 5px;
+}
+
+/* Sponsors */
+.sponsors{
+    text-align: center;
+}
+.sponsors *{
+    margin-bottom: 2rem;
+}
+.sponsor{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+.sponsor img{
+    filter: grayscale();
+}
+#footer{
+    text-align: center;
+    padding: 3rem;
+}
+
 @media screen and (max-width: 576px) {
 
     .navbar,
@@ -192,34 +232,61 @@ main {
         margin: 0 auto;
     }
 
-    .feature-description {
+    .feature-description,
+    .some-facts {
         margin: 1rem;
     }
 
-    .teams {
-        display: grid;
+    .teams, .sponsor {
         grid-template-columns: repeat(1, 1fr);
         gap: 1.4rem;
     }
+    
 
     .feature-image-property {
         width: calc(100% - 4rem);
     }
+
+    .facts {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+    }
+
+    .fact {
+        padding: 2rem 1rem;
+    }
+    .sponsor{
+        justify-items: center;
+    }
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (min-width:576px) and (max-width: 992px) {
     .navbar {
         flex-direction: column;
     }
 
-    .quick-feature, .described-feature {
+    .quick-feature,
+    .described-feature {
         flex-direction: column-reverse;
         margin: 0 auto;
     }
-    .feature-description {
+
+    .feature-description, .some-facts {
         margin: 2rem;
     }
+
     .feature-image-property {
         width: calc(100% - 4rem);
+    }
+    .facts {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    .sponsor{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+        justify-items: center;
     }
 }
